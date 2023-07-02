@@ -21,7 +21,8 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
+	font-family: 'Times New Roman', serif;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -180,6 +181,57 @@ input, select, textarea {
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
 	}
+	#headerr{
+		font-family: 'Brush Script MT', cursive;
+		letter-spacing: 5px;
+		font-size: 130px;
+	}
+	
+	@media screen and (max-width: 980px) {
+		#headerr{
+			font-family: 'Brush Script MT', cursive;
+			letter-spacing: 5px;
+			font-size: 130px;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		#headerr{
+			font-family: 'Brush Script MT', cursive;
+			letter-spacing: 5px;
+			font-size: 100px;
+		}
+		
+	}
+
+	@media screen and (max-width: 480px) {
+		#headerr{
+			letter-spacing: 5px;
+			font-size: 70px;
+		}
+	}
+
+#ii{
+	/* font-family: monospace; */
+	color:#0000;
+	background:
+	  linear-gradient(-90deg,#b74e91 5px,#0000 0) 10px 0,
+	  linear-gradient(#f1f1f1 0 0) 0 0;
+	background-size:calc(var(--n)*1ch) 200%;
+	-webkit-background-clip:padding-box,text;
+	background-clip:padding-box,text;
+	background-repeat:no-repeat;
+	animation: 
+	  b .7s infinite steps(1),   
+	  t calc(var(--n)* .1s) steps(var(--n)) forwards;
+  }
+  @keyframes t{
+	from {background-size:0 200%}
+  }
+  @keyframes b{
+	50% {background-position:0 -100%,0 0}
+  }
+
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
@@ -2480,6 +2532,7 @@ input, select, textarea {
 	:-ms-input-placeholder {
 		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
+		
 	}
 
 /* Icon */
@@ -2560,9 +2613,7 @@ input, select, textarea {
 				}
 
 /* Image */
-	section #ii{
-		filter: grayscale(100%);
-	}			
+
 	.image {
 		border-radius: 0.25em;
 		border: 0;
