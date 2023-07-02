@@ -2560,21 +2560,24 @@ input, select, textarea {
 				}
 
 /* Image */
-
+	section #ii{
+		filter: grayscale(100%);
+	}			
 	.image {
 		border-radius: 0.25em;
 		border: 0;
 		display: inline-block;
-		position: relative;
+		position: relative;  
 	}
 
 		.image img {
 			border-radius: 0.25em;
-			display: block;
+			display: block;  
+		
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 40%;  
 		}
 
 			.image.left img, .image.right img {
@@ -2607,6 +2610,7 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
+			
 		}
 
 			.image.main img {
