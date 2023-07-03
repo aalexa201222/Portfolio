@@ -21,10 +21,13 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="index.html#one" >Projects</a></li>
+						<li><a href="index.html#two" >About me</a></li>
 						<li><a href="index.html#three">Contact Me</a></li>
 					</ul>
 				</nav>
 			</header>
+
+
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -33,10 +36,18 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Amathus VR Dive project</h1>
-							<div>
+							<div class="inner3" style="position: relative; display: inline-block;">
 							<span class="image fit"><img src="images/water.png"  alt="" /></span>
-							<span class="image fit"><img src="images/water.png"  alt="" /></span>
-						</div>
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+							</div>		
+							<div class="inner3" style="position: relative; display: inline-block;">
+								<span class="image fit"><img src="images/astrapi1.JPG"  alt="" /></span>
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+						
+								</div>
+								
 							<h4>Introduction</h4>
 							<p>Virtual reality (VR) presents a transformative technology for underwater exploration, offering immersive experiences without the limitations and risks of physical scuba diving. This project proposes an innovative application of VR to explore underwater environments, focusing specifically on the ancient port of Amathus. By employing procedural generation techniques and artificial intelligence algorithms, the project aims to create a more immersive and realistic virtual underwater environment.</h4>
 							<h4>Procedural Generation of Underwater Vegetation</h4>
@@ -65,7 +76,11 @@
 					</section>
 
 			</div>
-
+			
+			<style>
+				
+			  </style>
+		
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
@@ -85,4 +100,50 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+
+	<!-- SLIDESHOW -->
+	<style>
+
+				
+		
+		</style>
+		</head>
+		<body>
+		
+
+		
+		
+		
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("inner3");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+
+
 </html>
+
