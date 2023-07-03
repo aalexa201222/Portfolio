@@ -99,7 +99,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #030303;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3425,7 +3425,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #1c1c20;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3929,10 +3929,12 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+		background-image: url("images/c.jpg");
+		filter: grayscale(100%);
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+		padding-right: 100px;
 	}
 
 		#intro p {
