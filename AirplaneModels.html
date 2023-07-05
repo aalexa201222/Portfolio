@@ -34,7 +34,23 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Louis Alexandrou Model Airplanes</h1>
-							<span class="image fit"><img src="images/finikas.jpg"  alt="" /></span>
+							<div class="inner3" style="position: relative; display: inline-block;">
+								<span class="image fit"><img src="images/finikas.jpg"  alt="" /></span>
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+								<a class="next" onclick="plusSlides(1)">❯</a>
+							</div>	
+							<div class="inner3" style="position: relative; display: inline-block;">
+								<span class="image fit"><img src="images/louis1.png"  alt="" /></span>
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+								<a class="next" onclick="plusSlides(1)">❯</a>
+						
+							</div>	
+							<div class="inner3" style="position: relative; display: inline-block;">
+								<span class="image fit"><img src="images/louis2.png"  alt="" /></span>
+								<a class="prev" onclick="plusSlides(-1)">❮</a>
+								<a class="next" onclick="plusSlides(1)">❯</a>
+						
+							</div>
 							<h4>Introduction</h4>
 							<p>This website serves as a comprehensive showcase of Louis' impressive background, highlighting his expertise in the fiel
 								d and allowing visitors to explore his exceptional projects. With engaging animations and a user-friendly interface, this
@@ -86,4 +102,33 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("inner3");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
 </html>
