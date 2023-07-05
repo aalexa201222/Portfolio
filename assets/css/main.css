@@ -3390,6 +3390,7 @@ input, select, textarea {
 				} */
 	
 		.wrapper.alt {
+			align-items: center;
 			background-color: #261c3e;
 		}
 
@@ -3668,6 +3669,7 @@ input, select, textarea {
 	#footer > .inner .menu {
 		font-size: 0.8em;
 		color: rgba(255, 255, 255, 0.15);
+		align-items: center;
 	}
 
 	#header + #wrapper + #footer > .inner {
