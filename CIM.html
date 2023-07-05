@@ -34,7 +34,20 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">C.I.M-Biomedical-Warehouse-Stock-Tracker</h1>
-							<span class="image fit"><img src="images/biomedicasl.jpg"  alt="" /></span>
+							<div class="inner">
+								
+								<div class="inner3" style="position: relative; display: inline-block;">
+									<span class="image fit"><img src="images/bio2.png"  alt="" /></span>
+									<a class="prev" onclick="plusSlides(-1)">❮</a>
+									<a class="next" onclick="plusSlides(1)">❯</a>
+								</div>	
+								<div class="inner3" style="position: relative; display: inline-block;">
+									<span class="image fit"><img src="images/bio3.png"  alt="" /></span>
+									<a class="prev" onclick="plusSlides(-1)">❮</a>
+									<a class="next" onclick="plusSlides(1)">❯</a>
+							
+								</div>	
+				
 							<p>The Warehouse Stock Tracker is a web-based application designed specifically for C.I.M Biomedical, a company specializing in the storage and management of medicines. This system serves as a comprehensive solution for tracking and monitoring the company's inventory, enabling efficient management of stock levels and ensuring the availability of medicines when needed.</p>
 
 							<p>The application features a secure login system that restricts access to authorized personnel only. Employees can log in using their unique username and password, which are authenticated against the company's user database for enhanced security.</p>
@@ -86,4 +99,45 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+		<!-- SLIDESHOW -->
+		<style>
+
+				
+		
+		</style>
+		</head>
+		<body>
+		
+
+		
+		
+		
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("inner3");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
 </html>
