@@ -210,6 +210,12 @@ input, select, textarea {
 			font-size: 70px;
 		}
 	}
+	/* @media screen and (max-width: 400px) {
+		#headerr{
+			letter-spacing: 5px;
+			font-size: 40px;
+		}
+	} */
 
 #ii{
 	/* font-family: monospace; */
@@ -3615,6 +3621,12 @@ input, select, textarea {
 							line-height: 6em;
 						}
 
+		}
+		@media screen and (max-width: 400px) {
+			#header{
+				letter-spacing: 2px;
+				font-size: 12px;
+			}
 		}
 
 /* Wrapper (main) */
